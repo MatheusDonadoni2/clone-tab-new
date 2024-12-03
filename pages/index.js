@@ -1,6 +1,6 @@
 function Home() {
-  return <h1>Hello world</h1>
-
+  const data = new Date()
+  return <h1>{data}</h1>
 }
 
 export default Home
