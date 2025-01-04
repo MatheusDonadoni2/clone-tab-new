@@ -3,9 +3,9 @@ import { resolve } from "node:path";
 import database from "infra/database";
 
 export default async function migrations(request, response) {
-  const methosAllowed = ["GET", "POST"];
+  const methodAllowed = ["GET", "POST"];
 
-  if (!methosAllowed.includes(request.method)) {
+  if (!methodAllowed.includes(request.method)) {
     response.status(405).json({
       error: `Method ${request.method} not allowed`,
     });
